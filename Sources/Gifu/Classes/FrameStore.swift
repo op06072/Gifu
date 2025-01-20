@@ -46,8 +46,8 @@ class FrameStore {
   /// Defaults to 10 when all frames are cached indefinitely.
   var frameBufferSize: Int {
     switch cachingStrategy {
-    case .cacheUpcoming(let size): size
-    case .cacheAll: 10
+    case .cacheUpcoming(let size): return size
+    case .cacheAll: return 10
     }
   }
 
